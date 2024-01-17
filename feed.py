@@ -6,9 +6,9 @@ from dateutil.parser import parse
 ##################################
 #Bot Configuration
 ##################################
-BOT_TOKEN = '6374349486:AAEJEGeAUnWv3HtlRZLa_tNhdvP-lkzg1Ds' 
+BOT_TOKEN = '' # Add token here 
 CHANNEL_ID = '@brokemlimk' # don't forget to add this to send_message
-bot = telebot.TeleBot("6374349486:AAEJEGeAUnWv3HtlRZLa_tNhdvP-lkzg1Ds")
+bot = telebot.TeleBot("") #Token
 
 def send_msg(message):
  bot.send_message(CHANNEL_ID,message)
@@ -16,7 +16,7 @@ def send_msg(message):
 ###################################
 #Link to be parsed
 ###################################
-NewsFeed = feedparser.parse("https://anidl.org/report-dead-links/feed/")
+NewsFeed = feedparser.parse("") # Website to be parsed
 
 ###################################
 #Date and Time of last published post
@@ -41,8 +41,8 @@ for i in range(len(NewsFeed.entries)):
         file.write(str(NewsFeed.entries[0].published))
         file.close()
 
-        print('Post Author :' , entry.author)
-        print('Post Published :' , entry.published)
+        print('Post Author: ', entry.author)
+        print('Post Published: ', entry.published)
         #Message formatting
         print(re.sub(r"\n\s*\n","\n",str(entry.summary)) , "\n")
         msg = 'Post Author :' + entry.author + "\n" + re.sub(r"\n\s*\n","\n",str(entry.summary))
