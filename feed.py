@@ -7,7 +7,7 @@ from dateutil.parser import parse
 #Bot Configuration
 ##################################
 BOT_TOKEN = '' # Add token here 
-CHANNEL_ID = '@brokemlimk' # don't forget to add this to send_message
+CHANNEL_ID = '' # Channel name # don't forget to add this to send_message 
 bot = telebot.TeleBot("") #Token
 
 def send_msg(message):
